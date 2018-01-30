@@ -1,0 +1,3 @@
+rootProject.name = 'niobium'
+
+include 'niobium-jvm', 'niobium-js'
