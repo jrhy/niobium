@@ -13,8 +13,8 @@ class NiobiumTest {
 
     @Test fun happyCase() = assertEquals(123, embeddedIntParser("a123b")?.value)
 
-	val intListParser : Parser<List<Int>> = separated(int, pat(",\\s*"))
-	val embeddedIntListParser : Parser<List<Int?>> =
+    val intListParser : Parser<List<Int>> = separated(int, pat(",\\s*"))
+    val embeddedIntListParser : Parser<List<Int?>> =
             (aParser and intListParser and bParser).map { it.second }
 
     val a = pat("a")
